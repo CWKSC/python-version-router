@@ -2,9 +2,13 @@
 
 ```
 This script change different python version by modify PATH environment variable
-Add folder of the script to PATH environment variable first
-And modify usepython-config.json to set root folder path for python folders
-it should be "C:\\" or "C:\\Program Files\\", by default it is "C:\\"
+It will remove all PythonXX\ and PythonXX\Scripts\ in PATH,
+and add corresponding target version tag folder to PATH
+Only temporarily works on the current process if without -keep flag
+
+Add folder of this script to PATH first
+Modify usepython-config.json to set root folder path for python folders If necessary
+It should be "C:\\" or "C:\\Program Files\\", by default it is "C:\\"
 
 Usage: usepython `$version_tag [-keep] [-root `$path]
 
