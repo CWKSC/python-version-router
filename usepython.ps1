@@ -31,7 +31,7 @@ usepython 311 -keep -root "C:\\Program Files\\"
 "@
 }
 
-$config_file_path = ".\usepython-config.json"
+$config_file_path = $PSScriptRoot + "\usepython-config.json"
 $config = Get-Content -Path $config_file_path -Raw | ConvertFrom-Json
 $root = $config.root
 $version_tag_list = $config.version_tag_list
